@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard-card">
+            <h1>Welcome to Your Dashboard</h1>
+            <div id="userInfo" class="user-info">
+                <p>Loading user information...</p>
+            </div>
+            
+            <div id="totpSetup" class="totp-setup" style="display: none;">
+                <h2>Two-Factor Authentication</h2>
+                <p>Enhance your account security by setting up 2FA using an authenticator app.</p>
+                <button id="setupTOTP" class="setup-button">Set up 2FA</button>
+            </div>
+
+            <div id="totpQRCode" class="totp-qr" style="display: none;">
+                <h2>Scan QR Code</h2>
+                <p>Scan this QR code with your authenticator app (e.g., Google Authenticator, Authy)</p>
+                <div id="qrCode" class="qr-code"></div>
+                <div class="verify-form">
+                    <input type="text" id="totpToken" placeholder="Enter 6-digit code" maxlength="6">
+                    <button id="verifyTOTP" class="verify-button">Verify</button>
+                </div>
+            </div>
+
+            <button id="logout" class="logout-button">Logout</button>
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+    <script src="./js/dashboard.js"></script>
+</body>
+</html> 
