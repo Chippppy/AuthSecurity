@@ -69,6 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return errors;
     }
 
+    // Email validation
+    function validateEmail(email) {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailRegex.test(email);
+    }
+
     registerForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
@@ -80,6 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Basic form validation
         if (!username || !email || !password || !password2) {
             showMessage('Please fill in all fields', 'error');
+            return;
+        }
+
+        // Email validation
+        if (!validateEmail(email)) {
+            showMessage('Please enter a valid email address', 'error');
             return;
         }
 

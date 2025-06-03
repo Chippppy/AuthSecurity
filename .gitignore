@@ -58,4 +58,6 @@ cover/
 # Misc
 *.bak
 *.tmp
-*.temp 
+*.temp
+
+todo.txt

@@ -4,7 +4,7 @@ A secure authentication system built with Django REST Framework backend and vani
 
 ## Features
 
-- User Registration with email verification
+- User Registration with email validation regex check
 - Secure Login with session management
 - Two-Factor Authentication (2FA)
   - TOTP-based authentication (RFC 6238 compliant)
